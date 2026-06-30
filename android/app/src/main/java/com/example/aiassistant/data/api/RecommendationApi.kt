@@ -1,7 +1,7 @@
 package com.example.aiassistant.data.api
 
-import com.example.aiassistant.RecommendationRequest
-import com.example.aiassistant.RecommendationResponse
+import com.example.aiassistant.domain.model.RecommendationRequest
+import com.example.aiassistant.domain.model.RecommendationResponse
 import retrofit2.http.Body
 import retrofit2.http.POST
 

@@ -2,7 +2,7 @@ package com.example.aiassistant.data
 
 import com.example.aiassistant.data.api.RecommendationApi
 import com.example.aiassistant.data.repository.RecommendationRepositoryImpl
-import com.example.aiassistant.RecommendationRepository
+import com.example.aiassistant.domain.repository.RecommendationRepository
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

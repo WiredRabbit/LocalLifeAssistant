@@ -1,9 +1,9 @@
 package com.example.aiassistant.data.repository
 
 import com.example.aiassistant.data.api.RecommendationApi
-import com.example.aiassistant.RecommendationRequest
-import com.example.aiassistant.RecommendationResponse
-import com.example.aiassistant.RecommendationRepository
+import com.example.aiassistant.domain.model.RecommendationRequest
+import com.example.aiassistant.domain.model.RecommendationResponse
+import com.example.aiassistant.domain.repository.RecommendationRepository
 
 class RecommendationRepositoryImpl(
     private val api: RecommendationApi
