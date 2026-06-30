@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -6,7 +8,7 @@ plugins {
 
 android {
     namespace = "com.example.aiassistant"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.aiassistant"
@@ -28,6 +30,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+
+    kotlin {
+        jvmToolchain(17)
+    }
 }
 
 dependencies {
@@ -35,7 +41,9 @@ dependencies {
     implementation(composeBom)
     testImplementation(composeBom)
     androidTestImplementation(composeBom)
-
+    implementation("androidx.appcompat:appcompat:1.7.1") {
+        exclude("support-v13")
+    }
     // 后面不用写版本号
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-tooling-preview")
